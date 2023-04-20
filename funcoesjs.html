@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        function ac() {
+            //window.alert("teste")
+            var var1 = document.getElementById("val1").value;
+            // var var2 = document.getElementById("3");
+            //window.alert(var1.value + " " + var2.value)
+            const texto = "a area do circulo e ";
+            document.getElementById("resultado").innerText = texto + var1 * var1 * 3.14159;
+            //return 3.14159
+        }
+
+        function convtemp() {
+            var far = document.getElementById('far').value;
+            var result = (far - 32) / 1.8;
+            document.getElementById("restemp").innerText = result;
+        }
+
+        function areatriangulo() {
+            var b = document.getElementById("base").value;
+            var h = document.getElementById("altura").value;
+            var result = b * h / 2;
+            document.getElementById("resultadoarea").innerText = result;
+
+            // var var2 = document.getElementById("3");
+        }
+
+        function perimetrocirculo() {
+            //window.alert("teste")
+            var raio = document.getElementById("raio").value;
+            // var var2 = document.getElementById("3");
+            //window.alert(var1.value + " " + var2.value)
+            const texto = "0 perimetro do circulo e ";
+            document.getElementById("res_areacirculo").innerText = texto + 2 * 3.14159 * raio;
+            //return 3
+        }
+
+        function nascimento() {
+            var nascimento = document.getElementById("datadenascimento").value;
+            var idade = (2023 - nascimento);
+            if (idade >= 18) {
+                var texto = 'é maior de idade';
+            } else {
+                var texto = 'é menor de idade'
+            }
+            document.getElementById("resdata").innerText = texto;
+        }
+
+        function desconto() {
+            var v = document.getElementById('valor').value;
+            var valordodesconto = (v * 5 / 100);
+            document.getElementById("resultadodesconto").innerText = valordodesconto;
+        }
+
+    </script>
+</head>
+
+<body>
+    <input id="val1" value="1">
+    <!-- <input id="val2" value="2"> -->
+    <button onclick="ac()">Escrever</button>
+    <p id="resultado">XXXX</p>
+
+    <input id="far" value="1">
+    <!-- <input id="val2" value="2"> -->
+    <button onclick="convtemp()">conversao de temperatura</button>
+    <p id="restemp">XXXX</p>
+
+    <input id="base" value="1">
+    <input id="altura" value="1">
+    <!-- <input id="val2" value="2"> -->
+    <button onclick="areatriangulo()">área do triângulo</button>
+    <p id="resultadoarea">XXXX</p>
+
+    <input id="raio" value="1">
+    <!-- <input id="val2" value="2"> -->
+    <button onclick="perimetrocirculo()">área do circulo</button>
+    <p id="res_areacirculo">XXXX</p>
+
+    <input id="datadenascimento" value="1">
+    <!-- <input id="val2" value="2"> -->
+    <button onclick="nascimento()">idade</button>
+    <p id="resdata">XXXX</p>
+
+    <input id="valor" value="100">
+    <!-- <input id="val2" value="2"> -->
+    <button onclick="desconto()">desconto</button>
+    <p id="resultadodesconto">XXXX</p>
+
+
+</body>
+
+
+</html>
